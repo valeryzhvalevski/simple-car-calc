@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        background-color: #0000ff12;
+      }
+      .box {
+        max-width: 80%;
+        margin: 50px auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        display: flex;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border: 1px solid;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: white;
+        margin-top: 15px;
+      }
+      input {
+        margin: 0 5px 0 14px;
+      }
+      button {
+        background-color: #0000ff12;
+        border: none;
+        border-radius: 3px;
+        height: 30px;
+      }
+      #result {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h1>Калькулятор стоимости авто</h1>
+      <form name="form">
+        <div class="field">
+          <label for="car_make">Марка:</label>
+          <select id="car_make" name="car_make">
+            <option value="" disabled selected>Выберите марку</option>
+            <option value="audi">Audi</option>
+            <option value="toyota">Toyota</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes-Benz</option>
+            <option value="honda">Honda</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fuel_type">Тип топлива:</label>
+          <input value="petrol" type="radio" name="fuel_type" />Бензин (включая
+          гибрид)
+          <input value="diesel" type="radio" name="fuel_type" />Дизельное
+          топливо
+          <input value="electric" type="radio" name="fuel_type" />Электрический
+        </div>
+        <div class="field">
+          <label for="engine_displacement">Объем двигателя:</label>
+          <input
+            type="number"
+            id="engine_displacement"
+            name="engine_displacement_name"
+            step="0.1"
+            min="1.1"
+            max="3.5"
+          />
+        </div>
+        <div class="field">
+          <label for="car_max_complectation">Макимальная комплектация</label>
+          <input type="checkbox" name="car_max_complectation" />
+        </div>
+        <div class="field">
+          <label for="car_rus">На учете РФ</label>
+          <input type="checkbox" name="car_rus" />
+        </div>
+
+        <button type="submit">Рассчитать</button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
