@@ -1,1 +1,1 @@
-https://valeryzhvalevski.github.io/car-calc/
+https://valeryzhvalevski.github.io/simple-car-calc/
